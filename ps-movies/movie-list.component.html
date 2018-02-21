@@ -1,0 +1,36 @@
+<div>
+  <table class="table"> 
+    <tr>
+      <th>Title</th>
+      <th>Length</th>
+      <th>Rating</th>
+      <th>Stars</th>           
+    </tr>
+    <tr ng-repeat="movie in model.movies">
+      <td>{{movie.title}}</td>
+      <td>{{movie.length}}</td>
+      <td>{{movie.rating}}</td>
+      <td> 
+        <movie-rating value="movie.rating">
+          <span class="glyphicon glyphicon-star">
+          </span>
+        </movie-rating> 
+      </td>
+      <td>
+      <div class="btn-group">
+        <button class="btn btn-default" ng-click="model.upRating(movie)">
+          <span class="glyohicon glyphicon-plus"></span>
+        </button>
+        <button class="btn btn-default" ng-click="model.downRating(movie)">
+            <span class="glyohicon glyphicon-minus"></span>
+        </button>
+      </div>
+      </td>
+    </tr>
+  </table>
+<!-- <h2>This hw from the templateUrl</h2> -->
+<!-- <p>{{ $ctrl.message }}</p> -->
+<!-- <h4>{{ model.message }}</h4>
+<input type="text" ng-model="model.message">
+<button ng-click="model.changeMessage()"> Change text MSG </button> -->
+</div>
